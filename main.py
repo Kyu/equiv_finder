@@ -49,6 +49,7 @@ while True:
 
                 school_id += 1
             except NoSuchElementException:
+                school_id = 1
                 break
 
         state_id += 1
