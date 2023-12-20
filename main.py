@@ -24,7 +24,7 @@ state_id = 0
 
 argc = len(sys.argv)
 
-if argc == 2:
+if argc >= 2:
     state_id = int(sys.argv[1])
 else:
     state_id = 1
