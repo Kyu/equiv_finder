@@ -6,6 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 from actions import Action
 
 BASE_URL = "https://webapps.wichita.edu/TransferEquiv/"
+COURSE_CODES = ("CS 101", )
 
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
@@ -13,7 +14,7 @@ options.add_argument("start-maximized")
 driver = webdriver.Chrome(options)
 driver.get(BASE_URL)
 
-do = Action(driver, ("CS 101",))
+do = Action(driver, COURSE_CODES)
 
 # do.select_state(3)
 # do.select_school(2)  # selenium.common.exceptions.NoSuchElementException

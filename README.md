@@ -1,6 +1,7 @@
 # Equiv Finder  
 
 Run: `pip install -r requirements.txt`  
-Enter the Course code(s) you need in main.py, `do = Action(driver, ("CS 101", COURSE_CODE, ETC))`  
+Modify `COURSE_CODES` in main.py for the Course code(s) you need:  
+`COURSE_CODES = ("CS 101", OTHER_COURSE_CODE, ETC)`  
 
-Run main.py  
+Run `main.py [state_number] [school_number]`. Args are optional.  
