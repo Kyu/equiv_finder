@@ -53,5 +53,7 @@ while True:
     except NoSuchElementException:
         break
 
+
+print(f"Stopped: State ID = {state_id}, School ID = {school_id}")
 input("Press enter to exit")
 driver.close()
