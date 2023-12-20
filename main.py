@@ -29,7 +29,7 @@ if argc >= 2:
 else:
     state_id = 1
 
-if argc == 3:
+if argc >= 3:
     school_id = int(sys.argv[2])
 else:
     school_id = 1
@@ -57,5 +57,5 @@ while True:
 
 
 print(f"Stopped: State ID = {state_id}, School ID = {school_id}")
-input("Press enter to exit")
+
 driver.close()
