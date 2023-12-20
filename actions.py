@@ -80,6 +80,7 @@ class Action:
             for q in txt:
                 if q.lower() in element_txt:
                     if not printed_name:
+                        print()
                         print(f"***** {school_name} ****")
                         printed_name = True
                     print(f"Found {q}")
