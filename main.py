@@ -27,20 +27,18 @@ argc = len(sys.argv)
 if argc == 2:
     state_id = int(sys.argv[1])
 else:
-    state_id = 0
+    state_id = 1
 
 if argc == 3:
     school_id = int(sys.argv[2])
 else:
-    school_id = 0
+    school_id = 1
 
 while True:
-    state_id += 1
     print(f"State ID = {state_id}")
     try:
         do.select_state(state_id)
         while True:
-            school_id += 1
             try:
                 do.select_school(school_id)
                 do.select_all_subjects()
@@ -48,8 +46,12 @@ while True:
 
                 do.find_text_in_table()
                 do.go_back()
+
+                school_id += 1
             except NoSuchElementException:
                 break
+
+        state_id += 1
     except NoSuchElementException:
         break
 
