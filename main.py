@@ -1,4 +1,5 @@
 import sys
+from datetime import datetime
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
@@ -34,6 +35,8 @@ if argc >= 3:
 else:
     school_id = 1
 
+schools_done = 0
+
 while True:
     print(f"State ID = {state_id}")
     try:
@@ -48,6 +51,7 @@ while True:
                 do.go_back()
 
                 school_id += 1
+                schools_done += 1
             except NoSuchElementException:
                 school_id = 1
                 break
@@ -58,5 +62,7 @@ while True:
 
 
 print(f"Stopped: State ID = {state_id}, School ID = {school_id}")
+print(f"Schools Done{schools_done}")
+print(f"Time: {datetime.now()}")
 
 driver.close()
