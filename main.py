@@ -62,7 +62,7 @@ while True:
 
 
 print(f"Stopped: State ID = {state_id}, School ID = {school_id}")
-print(f"Schools Done{schools_done}")
+print(f"Schools Done: {schools_done}")
 print(f"Time: {datetime.now()}")
 
 driver.close()
